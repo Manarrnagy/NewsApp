@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SportsActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-   <com.google.android.material.tabs.TabLayout
-       android:id="@+id/tabs"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:layout_constraintTop_toTopOf="parent"
-       app:tabMode="scrollable"
-       app:tabTextColor="@color/green"
-       app:tabSelectedTextColor="@color/white"
-       app:tabBackground="@drawable/tab_bg"
-       app:tabIndicator="@color/transparent"
-       />
+    <include
+        android:id="@+id/app_bar_home"
+        layout="@layout/app_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/articleRV"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/tabs"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/item_article"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+         >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/drawerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="News App!"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_percent="0.12  "
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/categoriesDrawerTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/drawerHeader"
+                android:drawableStart="@drawable/ic_categories"
+                android:text="Categories"
+                android:textColor="@color/black"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:drawablePadding="8dp"
+
+                />
+            <TextView
+                android:id="@+id/settingsDrawerTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/categoriesDrawerTv"
+                android:drawableStart="@drawable/ic_settings"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:drawablePadding="8dp"
+                android:foregroundGravity="center_horizontal"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

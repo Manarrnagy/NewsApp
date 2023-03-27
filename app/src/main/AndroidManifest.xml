@@ -14,8 +14,13 @@
         android:theme="@style/Theme.NewsApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.SplashActivity"
-            android:exported="true">
+            android:name=".ui.home.fragments.SettingsFragment"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.NewsApp.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,10 +28,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.SportsActivity"
+            android:name=".ui.SplashActivity"
+            android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.home.fragments.NewsFragment"
             android:exported="false" />
         <activity
-            android:name=".ui.CategoriesActivity"
+            android:name=".ui.home.fragments.CategoriesFragment"
             android:exported="false" />
     </application>
 

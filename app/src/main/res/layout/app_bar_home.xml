@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeActivity"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.12"
+        android:theme="@style/Theme.NewsApp.AppBarOverlay"
+        android:background="@drawable/page_title_bar"
+        android:backgroundTint="@color/green">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:popupTheme="@style/Theme.NewsApp.PopupOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/page_title_bar"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appbarConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:text="News App"
+                    />
+                <ImageView
+                    android:id="@+id/drawerIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="@+id/appbarConstraint"
+                    app:layout_constraintTop_toTopOf="@+id/appbarConstraint"
+                    app:layout_constraintBottom_toBottomOf="@+id/appbarConstraint"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/ic_menu"
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintWidth_percent="0.1"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+     <include layout="@layout/content_home"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout >

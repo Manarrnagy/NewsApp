@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.newsapp.R
+import com.example.newsapp.ui.home.fragments.NewsFragment
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed(
             object:Runnable{
                 override fun run() {
-                    val intent = Intent(this@SplashActivity,SportsActivity::class.java)
+                    val intent = Intent(this@SplashActivity, NewsFragment::class.java)
                     startActivity(intent)
                 }
             },
