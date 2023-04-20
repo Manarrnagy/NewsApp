@@ -54,6 +54,28 @@
                     app:layout_constraintHeight_percent="0.4"
                     app:layout_constraintWidth_percent="0.1"
                     />
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="@+id/appbarConstraint"
+                    app:layout_constraintTop_toTopOf="@+id/appbarConstraint"
+                    app:layout_constraintBottom_toBottomOf="@+id/appbarConstraint"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintWidth_percent="0.1"
+                    />
+                <View
+                    android:id="@+id/searchIconCover"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/searchIcon"
+                    app:layout_constraintEnd_toEndOf="@id/searchIcon"
+                    android:background="@color/green"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.appcompat.widget.Toolbar>
 

@@ -11,7 +11,7 @@ data class TabsResponse(
 	val status: String? = null,
 
 	@field:SerializedName("code")
-	val code: String? = null,
+	val code: Int? = null,
 
 @field:SerializedName("message")
 	val message: String? = null

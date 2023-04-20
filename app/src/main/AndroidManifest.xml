@@ -39,7 +39,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ui.home.fragments.NewsFragment"
+            android:name=".ui.home.fragments.news.NewsFragment"
             android:exported="false" />
         <activity
             android:name=".ui.home.fragments.CategoriesFragment"

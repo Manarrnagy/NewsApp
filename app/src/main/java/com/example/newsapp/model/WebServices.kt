@@ -16,7 +16,9 @@ interface WebServices {
     fun getArticles(
         @Query("apiKey") api: String,
         @Query("sources") tab: String,
-        @Query("page") page: Int =1
+        @Query("pageSize") pageSize: Int,
+        @Query("page") page: Int = 1
+
     ):Call<ArticlesResponse>
 
     @GET("/v2/everything")

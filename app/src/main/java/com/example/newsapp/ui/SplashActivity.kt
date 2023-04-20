@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import com.example.newsapp.R
-import com.example.newsapp.ui.home.fragments.NewsFragment
+import com.example.newsapp.ui.home.fragments.news.NewsFragment
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

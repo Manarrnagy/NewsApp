@@ -55,7 +55,6 @@ class ArticleDetailsFragment(var article: Article ) : Fragment() {
         articleLink.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(article.url))
             startActivity(browserIntent)
-            //Log.e("Article Link ##", "${article.url}")
 
         }
     }
